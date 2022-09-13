@@ -23,6 +23,8 @@ namespace WPF_intro
         public MainWindow()
         {
             InitializeComponent();
+            firstButton.FontSize = 50;
+            firstButton.Content = "Hello Dawid";
         }
     }
 }
