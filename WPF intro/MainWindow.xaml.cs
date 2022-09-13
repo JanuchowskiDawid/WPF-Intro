@@ -23,8 +23,17 @@ namespace WPF_intro
         public MainWindow()
         {
             InitializeComponent();
-            firstButton.FontSize = 50;
-            firstButton.Content = "Hello Dawid";
+            TextBlock myTb = new TextBlock();
+            myTb.Text = "Hello David";
+            myTb.Inlines.Add(" this is added using Inlines!");
+            myTb.Inlines.Add(new Run(" Run text")
+            {
+                Foreground = Brushes.Red,
+                TextDecorations = TextDecorations.Underline,
+            });
+            myTb.TextWrapping = TextWrapping.Wrap;
+            myTb.Foreground = Brushes.Aqua;
+            this.Content = myTb;
         }
     }
 }

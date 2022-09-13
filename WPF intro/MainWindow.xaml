@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
-        Title="Hello World Window " Height="300" Width="300">
-    <Grid>
-        <Button Name="firstButton" Content="Hello World"></Button>
-    </Grid>
+        Title="Hello World Window " Height="150" Width="200">
+    <StackPanel>
+    </StackPanel>
 </Window>
