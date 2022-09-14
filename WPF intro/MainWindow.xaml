@@ -5,7 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
-        Title="Hello World Window " Height="150" Width="200">
+        Title="Hello World Window" Height="200" Width="300">
     <StackPanel>
+        <TextBox 
+            FontSize="30" 
+            Margin="15"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            SpellCheck.IsEnabled="True"
+            Language="en-US"
+            Background="AliceBlue"
+            />
+        <Button 
+            x:Name="myBotton" 
+            Width="100" Height="30" 
+            Click="Button_Click" 
+            MouseDoubleClick="myBotton_MouseDoubleClick"
+            ToolTip="Interact with label"
+            MouseEnter="myBotton_MouseEnter"
+            MouseLeave="myBotton_MouseLeave"
+            >Click Me!</Button>
+        <Label Name="myLabel" FontSize="13"> Hello World</Label>
     </StackPanel>
 </Window>

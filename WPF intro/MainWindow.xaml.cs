@@ -22,18 +22,41 @@ namespace WPF_intro
     {
         public MainWindow()
         {
-            InitializeComponent();
-            TextBlock myTb = new TextBlock();
-            myTb.Text = "Hello David";
-            myTb.Inlines.Add(" this is added using Inlines!");
-            myTb.Inlines.Add(new Run(" Run text")
-            {
-                Foreground = Brushes.Red,
-                TextDecorations = TextDecorations.Underline,
-            });
-            myTb.TextWrapping = TextWrapping.Wrap;
-            myTb.Foreground = Brushes.Aqua;
-            this.Content = myTb;
+
+        InitializeComponent();
+            //TextBlock myTb = new TextBlock();
+            //myTb.Text = "Hello David";
+            //myTb.Inlines.Add(" this is added using Inlines!");
+            //myTb.Inlines.Add(new Run(" Run text")
+            //{
+            //    Foreground = Brushes.Red,
+            //    TextDecorations = TextDecorations.Underline,
+            //});
+            //myTb.TextWrapping = TextWrapping.Wrap;
+            //myTb.Foreground = Brushes.Aqua;
+            //this.Content = myTb;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            myLabel.FontSize += 1;
+        }
+
+        private void myBotton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            myLabel.Foreground = Brushes.Peru;
+            myLabel.FontSize -= 3;
+        }
+
+        private void myBotton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            myLabel.Foreground = Brushes.Red;
+        }
+
+        private void myBotton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            myLabel.Foreground = Brushes.Blue;
+
         }
     }
 }
