@@ -25,28 +25,10 @@ namespace WPF_intro
         InitializeComponent();
         }
 
-        private void Cheese_CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void myImg_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            cheese.FontWeight = FontWeights.Bold;
-        }
-
-        private void Cheese_CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            cheese.FontWeight = FontWeights.Regular;
-        }
-
-        private void cbParent_Checked(object sender, RoutedEventArgs e)
-        {
-            cheese.IsChecked = true;
-            ham.IsChecked = true;
-            spinach.IsChecked = true;
-        }
-
-        private void cbParent_Unchecked(object sender, RoutedEventArgs e)
-        {
-            cheese.IsChecked = false;
-            ham.IsChecked = false;
-            spinach.IsChecked = false;
+            myImg.Source = new BitmapImage(
+                new Uri(@"Images/Rick.jpg", UriKind.RelativeOrAbsolute));
         }
     }
 }

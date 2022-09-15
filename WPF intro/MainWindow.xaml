@@ -5,16 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="250" Width="300">
+        Title="Hello World Window" Height="300" Width="400">
     <StackPanel Margin="3">
-        <Label FontWeight="Bold">Topings</Label>
-        <CheckBox x:Name="cbParent" IsThreeState="True" Checked="cbParent_Checked" Unchecked="cbParent_Unchecked">Select All</CheckBox>
-        <CheckBox Margin="15,5" x:Name="cheese" Checked="Cheese_CheckBox_Checked" Unchecked="Cheese_CheckBox_Unchecked">Cheese</CheckBox>
-        <CheckBox Margin="15,5" x:Name="ham">Ham</CheckBox>
-        <CheckBox Margin="15,5" x:Name="spinach">Spinach</CheckBox>
-        <Label>Name</Label>
-        <TextBox></TextBox>
-        <Label>Password</Label>
-        <PasswordBox PasswordChar="°" MaxLength="5"></PasswordBox>
+        <Image x:Name="myImg" MouseUp="myImg_MouseUp" Width="300" Height="200" Source="pack://application:,,,/Images/Naklejka-RICK-wlepka-na-samochod-auto-laptop-30.jpg">
+            
+        </Image>
     </StackPanel>
 </Window>
