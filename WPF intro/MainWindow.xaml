@@ -7,17 +7,14 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="400" Width="300">
     <StackPanel VerticalAlignment="Center" Margin="20">
-        <Viewbox Stretch="Uniform">
-            <Calendar x:Name="myCalendar"
-                      SelectedDate="09.01.2022"
-                      DisplayMode="Month"
-                      SelectedDatesChanged="myCalendar_SelectedDatesChanged">
-                <Calendar.BlackoutDates>
-                    <CalendarDateRange Start="09.12.2022" End="12.12.2022"/>
-                </Calendar.BlackoutDates>
-                
-            </Calendar>
-        </Viewbox>
-            <TextBlock x:Name="myTextBlock"></TextBlock>
+        <DatePicker 
+            Name="myDatePicker"
+            SelectedDate="09.15.2022"
+            SelectedDateFormat="Long"
+            SelectedDateChanged="myDatePicker_SelectedDateChanged">
+            <DatePicker.BlackoutDates>
+                <CalendarDateRange Start="09.17.2022" End="09.28.2022"></CalendarDateRange>
+            </DatePicker.BlackoutDates>
+        </DatePicker>
     </StackPanel>
 </Window>

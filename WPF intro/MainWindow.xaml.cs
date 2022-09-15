@@ -23,13 +23,14 @@ namespace WPF_intro
         public MainWindow()
         {
         InitializeComponent();
-        myTextBlock.Text=myCalendar.SelectedDate.ToString();
         }
 
-        private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        private void myDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(myTextBlock != null)
-            myTextBlock.Text = myCalendar.SelectedDate.ToString();
+            if((sender as DatePicker).SelectedDate != null) { 
+            String dateSelected = (sender as DatePicker).SelectedDate.ToString();
+            MessageBox.Show("Date has been changed to " + dateSelected);
+            }
         }
     }
 }
