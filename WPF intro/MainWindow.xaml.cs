@@ -25,10 +25,13 @@ namespace WPF_intro
         InitializeComponent();
         }
 
-        private void myImg_MouseUp(object sender, MouseButtonEventArgs e)
+        private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            myImg.Source = new BitmapImage(
-                new Uri(@"Images/Rick.jpg", UriKind.RelativeOrAbsolute));
+            if (myTextBlock != null)
+            {
+                myTextBlock.Text = mySlider.Value.ToString();
+                myTextBlock.FontSize = mySlider.Value+1;
+            }
         }
     }
 }

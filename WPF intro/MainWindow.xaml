@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
         Title="Hello World Window" Height="300" Width="400">
-    <StackPanel Margin="3">
-        <Image x:Name="myImg" MouseUp="myImg_MouseUp" Width="300" Height="200" Source="pack://application:,,,/Images/Naklejka-RICK-wlepka-na-samochod-auto-laptop-30.jpg">
+    <StackPanel VerticalAlignment="Center" Margin="20">
+        <Slider ValueChanged="mySlider_ValueChanged" x:Name="mySlider" Maximum="100" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True" Value="50" Minimum="0">
             
-        </Image>
+        </Slider>
+        <TextBlock x:Name="myTextBlock" FontSize="{Binding ElementName=mySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}">50</TextBlock>
     </StackPanel>
 </Window>
