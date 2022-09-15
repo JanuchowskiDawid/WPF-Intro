@@ -25,12 +25,9 @@ namespace WPF_intro
         InitializeComponent();
         }
 
-        private void myDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void Expander_Expanded(object sender, RoutedEventArgs e)
         {
-            if((sender as DatePicker).SelectedDate != null) { 
-            String dateSelected = (sender as DatePicker).SelectedDate.ToString();
-            MessageBox.Show("Date has been changed to " + dateSelected);
-            }
+            MessageBox.Show("Expander was clicked");
         }
     }
 }
