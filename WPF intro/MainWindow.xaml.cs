@@ -23,19 +23,30 @@ namespace WPF_intro
         public MainWindow()
         {
         InitializeComponent();
-        
-            First.IsChecked = true;
-        
         }
 
-        private void First_Checked(object sender, RoutedEventArgs e)
+        private void Cheese_CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            First.FontSize += 5;
+            cheese.FontWeight = FontWeights.Bold;
         }
 
-        private void First_Unchecked(object sender, RoutedEventArgs e)
+        private void Cheese_CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            First.FontSize -= 5;
+            cheese.FontWeight = FontWeights.Regular;
+        }
+
+        private void cbParent_Checked(object sender, RoutedEventArgs e)
+        {
+            cheese.IsChecked = true;
+            ham.IsChecked = true;
+            spinach.IsChecked = true;
+        }
+
+        private void cbParent_Unchecked(object sender, RoutedEventArgs e)
+        {
+            cheese.IsChecked = false;
+            ham.IsChecked = false;
+            spinach.IsChecked = false;
         }
     }
 }

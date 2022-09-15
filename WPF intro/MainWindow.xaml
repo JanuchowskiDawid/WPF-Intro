@@ -6,17 +6,15 @@
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
         Title="Hello World Window" Height="250" Width="300">
-    <StackPanel>
-        <Label FontWeight="Bold">Pick One</Label>
-        <RadioButton x:Name="First" Checked="First_Checked" Unchecked="First_Unchecked" GroupName="first">One</RadioButton>
-        <RadioButton GroupName="first">Two</RadioButton>
-        <RadioButton GroupName="first">Three</RadioButton>
-        <RadioButton GroupName="first">Four</RadioButton>
-
-        <Label FontWeight="Bold">Pick One</Label>
-        <RadioButton>One</RadioButton>
-        <RadioButton>Two</RadioButton>
-        <RadioButton>Three</RadioButton>
-        <RadioButton>Four</RadioButton>
+    <StackPanel Margin="3">
+        <Label FontWeight="Bold">Topings</Label>
+        <CheckBox x:Name="cbParent" IsThreeState="True" Checked="cbParent_Checked" Unchecked="cbParent_Unchecked">Select All</CheckBox>
+        <CheckBox Margin="15,5" x:Name="cheese" Checked="Cheese_CheckBox_Checked" Unchecked="Cheese_CheckBox_Unchecked">Cheese</CheckBox>
+        <CheckBox Margin="15,5" x:Name="ham">Ham</CheckBox>
+        <CheckBox Margin="15,5" x:Name="spinach">Spinach</CheckBox>
+        <Label>Name</Label>
+        <TextBox></TextBox>
+        <Label>Password</Label>
+        <PasswordBox PasswordChar="°" MaxLength="5"></PasswordBox>
     </StackPanel>
 </Window>
