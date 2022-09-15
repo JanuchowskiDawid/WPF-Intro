@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="300" Width="400">
+        Title="Hello World Window" Height="400" Width="300">
     <StackPanel VerticalAlignment="Center" Margin="20">
-        <Slider ValueChanged="mySlider_ValueChanged" x:Name="mySlider" Maximum="100" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True" Value="50" Minimum="0">
-            
-        </Slider>
-        <TextBlock x:Name="myTextBlock" FontSize="{Binding ElementName=mySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}">50</TextBlock>
+        <Viewbox Stretch="Uniform">
+            <Calendar x:Name="myCalendar"
+                      SelectedDate="09.01.2022"
+                      DisplayMode="Month"
+                      SelectedDatesChanged="myCalendar_SelectedDatesChanged">
+                <Calendar.BlackoutDates>
+                    <CalendarDateRange Start="09.12.2022" End="12.12.2022"/>
+                </Calendar.BlackoutDates>
+                
+            </Calendar>
+        </Viewbox>
+            <TextBlock x:Name="myTextBlock"></TextBlock>
     </StackPanel>
 </Window>
