@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="400" Width="600">
     <ScrollViewer>
-        <StackPanel 
-        Orientation="Vertical">
+        <WrapPanel>
             <Button HorizontalAlignment="Center">Button1</Button>
             <Button HorizontalAlignment="Center">Button2</Button>
             <Button HorizontalAlignment="Center"    >Button3</Button>
@@ -41,6 +40,6 @@
             <Button HorizontalAlignment="Center">Button1</Button>
             <Button HorizontalAlignment="Center">Button2</Button>
             <Button HorizontalAlignment="Center"    >Button3</Button>
-        </StackPanel>
+        </WrapPanel>
     </ScrollViewer>
 </Window>
