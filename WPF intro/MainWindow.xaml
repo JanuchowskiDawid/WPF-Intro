@@ -5,41 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="400" Width="600">
-    <ScrollViewer>
-        <WrapPanel>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <StackPanel 
-            HorizontalAlignment="Center"
-        Orientation="Horizontal">
-                <Button>Button41</Button>
-                <Button>Button42</Button>
-                <Button>Button43</Button>
-            </StackPanel>
-
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-            <Button HorizontalAlignment="Center">Button1</Button>
-            <Button HorizontalAlignment="Center">Button2</Button>
-            <Button HorizontalAlignment="Center"    >Button3</Button>
-        </WrapPanel>
-    </ScrollViewer>
+        Title="Hello World Window" Height="500" Width="500">
+    <DockPanel
+        LastChildFill="False"
+        >
+        <Button DockPanel.Dock="Top" Height="100">Top</Button>
+        <Button DockPanel.Dock="Right" Width="100">Right</Button>
+        <Button DockPanel.Dock="Left">Left</Button>
+        <Button DockPanel.Dock="Bottom">Bottom</Button>
+        <Button>Center</Button>
+    </DockPanel>
 </Window>
