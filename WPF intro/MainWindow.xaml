@@ -6,13 +6,12 @@
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
         Title="Hello World Window" Height="500" Width="500">
-    <DockPanel
-        LastChildFill="False"
+    <Canvas
+        Opacity=".5"
         >
-        <Button DockPanel.Dock="Top" Height="100">Top</Button>
-        <Button DockPanel.Dock="Right" Width="100">Right</Button>
-        <Button DockPanel.Dock="Left">Left</Button>
-        <Button DockPanel.Dock="Bottom">Bottom</Button>
-        <Button>Center</Button>
-    </DockPanel>
+        <Button Canvas.Left="150">Click me</Button>
+        <Button Canvas.Right="50">Click me</Button>
+        <Rectangle Width="100" Height="100" Panel.ZIndex="2" Fill="Aqua" Canvas.Bottom="0" Canvas.Right="0"></Rectangle>
+        <Rectangle Width="100" Height="100" Panel.ZIndex="1" Fill="BlueViolet" Canvas.Bottom="50" Canvas.Right="50"></Rectangle>
+    </Canvas>
 </Window>
