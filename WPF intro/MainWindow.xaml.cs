@@ -29,5 +29,11 @@ namespace WPF_intro
         {
             MessageBox.Show("Expander was clicked");
         }
+
+        private void NewProject_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBox.Show("New Project created");
+        }
     }
 }

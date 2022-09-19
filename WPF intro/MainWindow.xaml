@@ -10,7 +10,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem Header="New">
-                    <MenuItem Header="Project"></MenuItem>
+                    <MenuItem x:Name="NewProject" Click="NewProject_Click" Header="Project"></MenuItem>
                     <MenuItem Header="Item"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Open"></MenuItem>
