@@ -6,22 +6,20 @@
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
         Title="Hello World Window" Height="500" Width="500">
-    <DockPanel>
-        <ToolBarTray DockPanel.Dock="Top">
-            <ToolBar>
-                <Button x:Name="deleteButton" Click="deleteButton_Click">
-                    <Image Source="/Images/Rick.jpg" Width="50"></Image>
-                </Button>
-                <Separator/>
-                <Label Content="Fontzise:"></Label>
-                <ComboBox x:Name="Cb1" SelectionChanged="ComboBox_SelectionChanged">
-                    <ComboBoxItem>6</ComboBoxItem>
-                    <ComboBoxItem>8</ComboBoxItem>
-                    <ComboBoxItem IsSelected="True">10</ComboBoxItem>
-                    <ComboBoxItem>12</ComboBoxItem>
-                </ComboBox>
-            </ToolBar>
-        </ToolBarTray>
-        <TextBlock x:Name="myTextBox" Text="Delete tihs by clicking button" FontSize="29"></TextBlock>
-    </DockPanel>
+    <StackPanel>
+        <TextBox
+            x:Name="myTextbox"
+            Height="200"
+            >
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="miBold" Header="Bold" Click="miBold_Click"
+                              IsCheckable="True"/>
+                    <MenuItem Name="miNormal" Header="Normal" Click="miNormal_Click"/>
+
+
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+    </StackPanel>
 </Window>

@@ -24,26 +24,14 @@ namespace WPF_intro
         {
         InitializeComponent();
         }
-
-        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        private void miBold_Click(object sender, RoutedEventArgs e)
         {
-            myTextBox.Text = "";
+            myTextbox.FontWeight = FontWeights.Bold;
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void miNormal_Click(object sender, RoutedEventArgs e)
         {
-            ComboBox Cb1 = (ComboBox)sender;
-            ComboBoxItem cbItem = (ComboBoxItem)Cb1.SelectedItem;
-            string newFontsize = (string)cbItem.Content;
-
-            int temp;
-            if(Int32.TryParse(newFontsize, out temp))
-            {
-                if (myTextBox!= null)
-                {
-                    myTextBox.FontSize = temp;
-                }
-            }
+            myTextbox.FontWeight = FontWeights.Normal;
         }
     }
 }
