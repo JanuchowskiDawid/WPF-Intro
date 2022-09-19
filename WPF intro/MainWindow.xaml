@@ -6,20 +6,16 @@
         xmlns:local="clr-namespace:WPF_intro"
         mc:Ignorable="d"
         Title="Hello World Window" Height="500" Width="500">
-    <StackPanel>
-        <TextBox
-            x:Name="myTextbox"
-            Height="200"
-            >
-            <TextBox.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Name="miBold" Header="Bold" Click="miBold_Click"
-                              IsCheckable="True"/>
-                    <MenuItem Name="miNormal" Header="Normal" Click="miNormal_Click"/>
-
-
-                </ContextMenu>
-            </TextBox.ContextMenu>
-        </TextBox>
-    </StackPanel>
+    <DockPanel LastChildFill="False">
+        <Button x:Name="progressButton" DockPanel.Dock="Top" Click="progressButton_Click">Increase by 10</Button>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem x:Name="myStackBarItem">
+                Loading...
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <ProgressBar x:Name="myProgressBar" Width="200" Height="15" Value="10"/>
+            </StatusBarItem>
+        </StatusBar>
+    </DockPanel>
 </Window>

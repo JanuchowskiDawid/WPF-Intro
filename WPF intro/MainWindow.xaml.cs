@@ -24,14 +24,11 @@ namespace WPF_intro
         {
         InitializeComponent();
         }
-        private void miBold_Click(object sender, RoutedEventArgs e)
-        {
-            myTextbox.FontWeight = FontWeights.Bold;
-        }
 
-        private void miNormal_Click(object sender, RoutedEventArgs e)
+        private void progressButton_Click(object sender, RoutedEventArgs e)
         {
-            myTextbox.FontWeight = FontWeights.Normal;
+            myProgressBar.Value += 10;
+            if(myProgressBar.Value ==100) { myStackBarItem.Content = "Done"; };
         }
     }
 }
