@@ -7,15 +7,21 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="500" Width="500">
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="File">
-                <MenuItem Header="New">
-                    <MenuItem x:Name="NewProject" Click="NewProject_Click" Header="Project"></MenuItem>
-                    <MenuItem Header="Item"></MenuItem>
-                </MenuItem>
-                <MenuItem Header="Open"></MenuItem>
-                <MenuItem Header="Clone Repository"></MenuItem>
-            </MenuItem>
-        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button x:Name="deleteButton" Click="deleteButton_Click">
+                    <Image Source="/Images/Rick.jpg" Width="50"></Image>
+                </Button>
+                <Separator/>
+                <Label Content="Fontzise:"></Label>
+                <ComboBox x:Name="Cb1" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">10</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBlock x:Name="myTextBox" Text="Delete tihs by clicking button" FontSize="29"></TextBlock>
     </DockPanel>
 </Window>

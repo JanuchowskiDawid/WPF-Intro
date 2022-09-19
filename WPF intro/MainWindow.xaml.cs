@@ -25,15 +25,25 @@ namespace WPF_intro
         InitializeComponent();
         }
 
-        private void Expander_Expanded(object sender, RoutedEventArgs e)
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Expander was clicked");
+            myTextBox.Text = "";
         }
 
-        private void NewProject_Click(object sender, RoutedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ComboBox Cb1 = (ComboBox)sender;
+            ComboBoxItem cbItem = (ComboBoxItem)Cb1.SelectedItem;
+            string newFontsize = (string)cbItem.Content;
 
-            MessageBox.Show("New Project created");
+            int temp;
+            if(Int32.TryParse(newFontsize, out temp))
+            {
+                if (myTextBox!= null)
+                {
+                    myTextBox.FontSize = temp;
+                }
+            }
         }
     }
 }
